@@ -1,0 +1,125 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.813rem;
+}
+
+/*=============== RESET AND GLOBAL STYLES ===============*/
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align top of the page */
+  overflow: hidden; /* Prevent any scrolling */
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*=============== FULL SCREEN PAGE LAYOUT ===============*/
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem; /* Ensure padding to prevent content from touching edges */
+}
+
+/*=============== ADD STUDENT FORM ===============*/
+.add-student {
+  position: relative;
+  background-color: hsla(0, 0%, 100%, 0.9);
+  border: 2px solid hsla(0, 0%, 100%, 0.7);
+  padding: 1.5rem; /* Increase padding for better spacing */
+  color: var(--black-color);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1000px; /* Increased max width */
+  height: 90vh; /* Use more vertical space */
+  overflow: hidden; /* Prevent scrolling */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*=============== FORM ROWS AND COLUMNS ===============*/
+.add-student__form-row {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  gap: 1.25rem; /* Adjust space between columns */
+}
+
+.add-student__form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1 1 45%; /* Each column takes up 45% of the form width */
+}
+
+.add-student__form-column input,
+.add-student__form-column select {
+  width: 100%;
+  background: none;
+  border: 2px solid hsla(0, 0%, 80%, 1);
+  color: var(--black-color);
+  padding: 0.75rem;
+  border-radius: 4rem;
+  font-size: 1rem;
+}
+
+.add-student__form-column input:focus,
+.add-student__form-column select:focus {
+  border-color: hsl(220, 90%, 55%);
+  outline: none;
+}
+
+/* Button */
+.login__button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.25rem;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 4rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.login__button:hover {
+  background-color: hsl(220, 90%, 30%);
+}
+
+.login__button:active {
+  transform: scale(0.98);
+}
+
+/* Title */
+.login__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+}
+
+/* Make button fit column width */
+.add-student__form-column button {
+  width: 100%; 
+  padding: 1rem;
+}

@@ -1,0 +1,76 @@
+/* src/styles/Sidebar.css */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: right 0.3s ease; /* Smooth transition for toggle */
+    padding-top: 20px;
+    z-index: 1000;
+  }
+  
+  .sidebar.open {
+    right: 0; /* Slide in when sidebar is open */
+  }
+  
+  .sidebar__toggle-btn {
+    position: absolute;
+    top: 20px;
+    left: -45px; /* Position the button outside the sidebar */
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .sidebar__toggle-btn:hover {
+    background-color: #555;
+  }
+  
+  .sidebar__list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar__item {
+    margin: 20px 0;
+  }
+  
+  .sidebar__link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 4px;
+    font-size: 1.1rem;
+  }
+  
+  .sidebar__link:hover {
+    background-color: #444;
+  }
+  
+  .logout-btn {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4rem;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c2185b;
+  }
+  
+  .logout-btn:active {
+    transform: scale(0.98);
+  }
+  

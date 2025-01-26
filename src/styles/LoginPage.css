@@ -1,0 +1,110 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.813rem;
+}
+
+/*=============== RESET AND GLOBAL STYLES ===============*/
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Horizontal center */
+  align-items: center; /* Vertical center */
+   /* Optional: Add a clean background color */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*=============== LOGIN ===============*/
+.login {
+  position: relative;
+  background-color: hsla(0, 0%, 100%, 0.9);
+  border: 2px solid hsla(0, 0%, 100%, 0.7);
+  padding: 2.5rem 1rem;
+  color: var(--black-color);
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px; /* Prevent the form from becoming too wide */
+}
+
+.login__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  margin-bottom: 1.25rem;
+}
+
+.login__inputs {
+  display: grid;
+  row-gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.login__input {
+  width: 100%;
+  background: none;
+  border: 2px solid hsla(0, 0%, 80%, 1);
+  color: var(--black-color);
+  padding: 1rem;
+  border-radius: 4rem;
+  font-size: 1rem;
+}
+
+.login__input:focus {
+  border-color: hsl(220, 90%, 55%);
+  outline: none;
+}
+
+.login__error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.login__button {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 4rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.login__button:hover {
+  background-color: hsl(220, 90%, 30%);
+}
+
+.login__button:active {
+  transform: scale(0.98);
+}
+
+.login__register {
+  font-size: var(--small-font-size);
+  text-align: center;
+}
+
+.login__register a {
+  color: hsl(220, 90%, 55%);
+  font-weight: 500;
+}
+
+.login__register a:hover {
+  text-decoration: underline;
+}

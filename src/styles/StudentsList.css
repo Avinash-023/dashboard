@@ -1,0 +1,150 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.813rem;
+  --main-bg-color: hsla(0, 0%, 100%, 0.9);
+  --highlight-color: hsl(220, 90%, 55%);
+  --error-color: red;
+  --button-hover-color: hsl(220, 90%, 30%);
+}
+
+/*=============== RESET AND GLOBAL STYLES ===============*/
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--body-font);
+  background-color: var(--main-bg-color);
+  overflow-x: hidden;
+
+}
+
+.students-list {
+  flex: 1;
+  width: 100%;
+  height: 100vh; /* Make sure the container covers full viewport height */
+  padding: 3rem 2rem;
+  color: var(--black-color);
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.login__title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.add-student-link {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  padding: 0.6em 1.2em;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+
+
+.add-student-link:active {
+  transform: scale(0.98);
+}
+
+/*=============== STUDENT CARDS ===============*/
+.students-list__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px; /* Limit max width of cards */
+  margin-top: 2rem;
+}
+
+.student-card {
+  background-color: var(--white-color);
+  border: 2px solid hsla(0, 0%, 80%, 1);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.student-card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.student-card__details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.student-card__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-card__actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-link {
+  padding: 0.75rem 1.5rem;
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4rem;
+  font-size: 0.875rem;
+}
+
+.edit-link:hover {
+  background-color: #45a049;
+}
+
+.delete-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--error-color);
+  color: #fff;
+  border: none;
+  border-radius: 4rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}
+/* Add this to your StudentsList.css */
+.header-actions button.logout-btn {
+    margin-left: 10px; /* Adds space between Add Student and Logout buttons */
+  }
+  
