@@ -16,7 +16,6 @@ function App() {
         <Route path="/addstudent/:id" element={<AddStudent />} /> {/* For editing student */}
         <Route path="/RegisterPage" element={<RegisterPage />} />
         <Route path="/loginPage" element={<LoginPage />} />
-        <Route path="/registerPage" element={<RegisterPage />} />
       </Routes>
     </Router>
   );
